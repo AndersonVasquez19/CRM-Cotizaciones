@@ -1,0 +1,108 @@
+{
+  "title": "Elige una dirección de la línea profesional / familiar",
+  "question": "Ronda 2 (registro más familiar): tres sistemas visuales de ingeniería B2B limpios y reconocibles, más el estándar de categoría.",
+  "options": [
+    {
+      "id": "grounded-rack",
+      "kind": "grounded",
+      "label": "Rack & Patchboard Anodizado",
+      "kicker": "OPCIÓN 01",
+      "lineage": "Paneles de parcheo Panduit / Fluke y gabinetes de aluminio anodizado",
+      "thesis": "Superficie aluminio cepillado (#ECEFF3) con riel grafito (#181C22), acento verde azulado anodizado (#0F766E) y etiquetas tipo puerto.",
+      "palette": [
+        "#181C22",
+        "#ECEFF3",
+        "#FFFFFF",
+        "#0F766E",
+        "#D97706"
+      ],
+      "materials": [
+        "aluminio cepillado",
+        "grafito mate",
+        "etiquetas de puerto"
+      ],
+      "viewport": "Riel lateral grafito con tira de estado de puertos en cabecera, KPIs limpios sin sombra y tabla técnica con badges tipo etiqueta de rack.",
+      "risk": "Si las etiquetas de código compiten con los estados, la tabla puede verse cargada.",
+      "html": ".impeccable/mocks/decision/grounded-rack.html",
+      "comp": ".impeccable/mocks/decision/grounded-rack.png"
+    },
+    {
+      "id": "grounded-optical",
+      "kind": "grounded",
+      "label": "Calibración Óptica & Precisión",
+      "kicker": "OPCIÓN 02",
+      "lineage": "Software profesional de videovigilancia VMS y óptica de precisión",
+      "thesis": "Riel obsidiana (#111317), lienzo gris frío equilibrado (#F1F3F5) y acento esmeralda óptico (#059669) con visor de umbral de margen.",
+      "palette": [
+        "#111317",
+        "#F1F3F5",
+        "#FFFFFF",
+        "#059669",
+        "#B45309"
+      ],
+      "materials": [
+        "cristal óptico",
+        "obsidiana",
+        "regla de umbral"
+      ],
+      "viewport": "Layout limpio de alta legibilidad con indicador visual de salud de margen y estados operativos claros en verde/ámbar/rojo.",
+      "risk": "Cercano a herramientas de monitoreo IT; requiere tipografía muy nítida para sentirse CRM comercial.",
+      "html": ".impeccable/mocks/decision/grounded-optical.html",
+      "comp": ".impeccable/mocks/decision/grounded-optical.png"
+    },
+    {
+      "id": "grounded-blueprint",
+      "kind": "grounded",
+      "label": "Folio Blueprint & Ingeniería",
+      "kicker": "OPCIÓN 03",
+      "lineage": "Planos de obra eléctrica y documentación técnica de campo",
+      "thesis": "Riel azul Prusia profundo (#0F1E36), papel técnico limpio (#F8FAFC) y trazos cian de plano (#0284C7) para selecciones activas.",
+      "palette": [
+        "#0F1E36",
+        "#F8FAFC",
+        "#FFFFFF",
+        "#0284C7",
+        "#1E293B"
+      ],
+      "materials": [
+        "papel vitela",
+        "tinta prusia",
+        "trazo cian"
+      ],
+      "viewport": "Navegación lateral Prusia con cabecera de escala técnica, tarjetas de borde fino 1px y tablas de alta claridad.",
+      "risk": "El azul marino + cian es familiar en B2B; su distinción depende del rigor en bordes y tipografía.",
+      "html": ".impeccable/mocks/decision/grounded-blueprint.html",
+      "comp": ".impeccable/mocks/decision/grounded-blueprint.png"
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": true
+  },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "Estándar SaaS Corporativo",
+    "thesis": "Ejecución al nivel de Linear / HubSpot / Pipedrive: neutro, limpio y predecible.",
+    "palette": [
+      "#FFFFFF",
+      "#0F172A",
+      "#4F46E5"
+    ],
+    "materials": [
+      "tarjetas limpias",
+      "sombras suaves"
+    ],
+    "viewport": "Sidebar oscuro clásico, tarjetas KPI redondeadas y tablas estándar.",
+    "risk": "Indistinguible de cualquier plantilla SaaS estándar.",
+    "html": ".impeccable/mocks/decision/canon.html",
+    "comp": ".impeccable/mocks/decision/canon.png"
+  },
+  "steer": true
+}

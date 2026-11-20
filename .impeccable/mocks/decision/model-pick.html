@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { width: 1440px; height: 900px; overflow: hidden; font-family: 'Public Sans', sans-serif; background: #F5F4F0; color: #141619; display: flex; flex-direction: column; }
+  .topbar { height: 56px; background: #141619; color: #F5F4F0; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #1D4ED8; }
+  .brand { font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; }
+  .tabs { display: flex; gap: 24px; font-size: 13px; color: #9CA3AF; }
+  .tabs span.active { color: #FFFFFF; font-weight: 600; border-bottom: 2px solid #1D4ED8; padding: 17px 0; }
+  .shell { display: flex; flex: 1; }
+  .index-rail { width: 210px; border-right: 1px solid #D6D3CB; padding: 22px 18px; background: #ECEAE4; }
+  .index-rail h3 { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: #57534E; margin-bottom: 12px; }
+  .idx-link { padding: 8px 0; border-bottom: 1px solid #D6D3CB; font-size: 13px; font-weight: 500; display: flex; justify-content: space-between; }
+  .idx-link.active { color: #1D4ED8; font-weight: 700; }
+  .canvas { flex: 1; padding: 28px 32px; display: flex; flex-direction: column; gap: 22px; }
+  .head-row { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 1px solid #141619; padding-bottom: 14px; }
+  .head-row h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
+  .btn-cobalt { background: #1D4ED8; color: #FFFFFF; border: none; padding: 10px 18px; font-size: 13px; font-weight: 600; }
+  .band { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid #141619; background: #FFFFFF; }
+  .cell { padding: 16px 20px; border-right: 1px solid #D6D3CB; }
+  .cell:last-child { border-right: none; }
+  .cell-k { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #57534E; }
+  .cell-v { font-size: 24px; font-weight: 700; margin-top: 6px; font-variant-numeric: tabular-nums; }
+  .sheet { background: #FFFFFF; border: 1px solid #D6D3CB; flex: 1; padding: 18px 22px; }
+  .sheet h2 { font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; color: #1D4ED8; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; padding: 9px 10px; border-bottom: 2px solid #141619; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+  td { padding: 11px 10px; border-bottom: 1px solid #E7E5E4; font-variant-numeric: tabular-nums; }
+  .mono { font-family: 'JetBrains Mono', monospace; color: #1D4ED8; }
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">TECHQUOTE // TIA-568 SPEC</div>
+    <nav class="tabs"><span class="active">Resumen</span><span>Pipeline</span><span>Cotizaciones</span><span>Proyectos</span><span>Almacén</span><span>Finanzas</span></nav>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;">ADMIN · LIMA</div>
+  </header>
+  <div class="shell">
+    <aside class="index-rail">
+      <h3>Índice de Norma</h3>
+      <div class="idx-link active"><span>01. KPIs</span><span>→</span></div>
+      <div class="idx-link"><span>02. Cotizaciones</span><span>41</span></div>
+      <div class="idx-link"><span>03. Aprobaciones</span><span>02</span></div>
+      <div class="idx-link"><span>04. Obras PRY</span><span>05</span></div>
+      <div class="idx-link"><span>05. Tickets SLA</span><span>03</span></div>
+    </aside>
+    <main class="canvas">
+      <div class="head-row">
+        <div><h1>Hoja de Control Comercial</h1><p style="font-size:13px;color:#57534E;">Integración CCTV, Cableado Estructurado y Redes</p></div>
+        <button class="btn-cobalt">+ Emitir Cotización</button>
+      </div>
+      <div class="band">
+        <div class="cell"><div class="cell-k">PIPELINE ACTIVO</div><div class="cell-v">S/ 184,500</div></div>
+        <div class="cell"><div class="cell-k">COTIZADO MES</div><div class="cell-v">S/ 96,420</div></div>
+        <div class="cell"><div class="cell-k">MARGEN PROMEDIO</div><div class="cell-v" style="color:#1D4ED8">28.4%</div></div>
+        <div class="cell"><div class="cell-k">ALERTAS MARGEN</div><div class="cell-v" style="color:#D97706">02</div></div>
+      </div>
+      <div class="sheet">
+        <h2>Registro de Cotizaciones Activas</h2>
+        <table>
+          <thead><tr><th>REF</th><th>Cliente</th><th>Servicio</th><th>Margen</th><th>Monto</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">COT-2026-0041</td><td>Clínica San Pablo</td><td>CCTV Torre B</td><td>31.2%</td><td>S/ 42,800.00</td><td>Aprobada</td></tr>
+            <tr><td class="mono">COT-2026-0040</td><td>Logística Callao</td><td>Fibra Óptica</td><td>16.8%</td><td>S/ 28,150.00</td><td>Pendiente Margen</td></tr>
+            <tr><td class="mono">COT-2026-0039</td><td>Banco Andino</td><td>Wi-Fi 6E</td><td>27.5%</td><td>S/ 19,400.00</td><td>Enviada</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tq-rail: #0b0f14;
+  --tq-rail-elevated: #141b23;
+  --tq-rail-border: #1e2733;
+  --tq-canvas: #f3f5f8;
+  --tq-surface: #ffffff;
+  --tq-surface-subtle: #f8fafc;
+  --tq-border: #d8dfe8;
+  --tq-border-strong: #bcc7d6;
+  --tq-ink: #0f172a;
+  --tq-ink-muted: #526071;
+  --tq-accent: #0891b2;
+  --tq-accent-hover: #0e7490;
+  --tq-accent-soft: #ecfeff;
+  --tq-emerald: #059669;
+  --tq-amber: #d97706;
+  --tq-crimson: #dc2626;
+}
+
+@layer base {
+  html {
+    font-family: 'Public Sans', system-ui, -apple-system, sans-serif;
+    color: var(--tq-ink);
+    background-color: var(--tq-canvas);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--tq-accent);
+    color: #ffffff;
+  }
+
+  input,
+  textarea,
+  select {
+    caret-color: var(--tq-accent);
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--tq-accent);
+    outline-offset: 2px;
+  }
+}
+
+.tq-num {
+  font-variant-numeric: tabular-nums;
+}
+
+.tq-code {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tq-panel {
+  background-color: var(--tq-surface);
+  border: 1px solid var(--tq-border);
+  border-radius: 6px;
+}
+
+.tq-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid var(--tq-border);
+  background-color: var(--tq-surface-subtle);
+}
+
+.tq-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--tq-accent);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5625rem 1rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: background-color 160ms ease, transform 120ms ease;
+}
+
+.tq-btn-primary:hover:not(:disabled) {
+  background-color: var(--tq-accent-hover);
+}
+
+.tq-btn-primary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.tq-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tq-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--tq-surface);
+  color: var(--tq-ink);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5625rem 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--tq-border-strong);
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.tq-btn-secondary:hover:not(:disabled) {
+  background-color: var(--tq-surface-subtle);
+  border-color: var(--tq-ink-muted);
+}
+
+.tq-input {
+  width: 100%;
+  background-color: var(--tq-surface);
+  border: 1px solid var(--tq-border-strong);
+  border-radius: 5px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--tq-ink);
+  transition: border-color 150ms ease;
+}
+
+.tq-input:focus {
+  border-color: var(--tq-accent);
+  outline: none;
+}
+
+.tq-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.tq-table thead th {
+  text-align: left;
+  padding: 0.6875rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--tq-ink-muted);
+  background-color: var(--tq-surface-subtle);
+  border-bottom: 1px solid var(--tq-border);
+}
+
+.tq-table tbody td {
+  padding: 0.8125rem 1rem;
+  border-bottom: 1px solid #edf1f6;
+  font-variant-numeric: tabular-nums;
+}
+
+.tq-table tbody tr:hover {
+  background-color: #f8fbfd;
+}

@@ -1,0 +1,186 @@
+{
+  "title": "Elige la dirección visual para TechQuote CRM",
+  "question": "La tirada asignó Catálogo Técnico Industrial (Industrial Binder). Puedes confirmarla, elegir una alternativa o pedir otra mano.",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "Catálogo Técnico Industrial",
+      "kicker": "THE ROLL",
+      "lineage": "Manuales y catálogos técnicos de equipamiento eléctrico y redes (Rittal / Fluke / Panduit)",
+      "thesis": "Cada pantalla opera como una ficha técnica de ingeniería: retícula de 1px sin sombras blandas, pestañas numeradas y acento naranja de seguridad.",
+      "palette": [
+        "#131B24",
+        "#F7F8FA",
+        "#FFFFFF",
+        "#EA580C",
+        "#0369A1"
+      ],
+      "materials": [
+        "papel técnico satinado",
+        "retícula 1px",
+        "pestañas de seguridad"
+      ],
+      "viewport": "Barra lateral hierro prusiano (#131B24) con indicadores de sección numerados, cabecera fija con KPIs tabulares y área de trabajo de alta densidad en blanco técnico.",
+      "risk": "Si se abusa del naranja de seguridad en elementos inactivos, compite con las alertas reales de margen o SLA.",
+      "raised": [
+        {
+          "from": "challenger-split-flap",
+          "raise": "Alineación tabular estricta donde los cambios de estado actualizan en sitio sin saltos de diseño."
+        },
+        {
+          "from": "challenger-crouwel",
+          "raise": "Líneas estructurales visibles de 1px que ordenan módulos densos eliminando tarjetas genéricas con sombra."
+        },
+        {
+          "from": "challenger-star-atlas",
+          "raise": "Jerarquía visual por magnitud para que los montos críticos y alertas SLA destaquen antes que las etiquetas."
+        }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html",
+      "comp": ".impeccable/mocks/decision/assigned.png"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "Hoja de Especificación TIA-568",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Normas técnicas de cableado estructurado y planos de arquitectura DIN",
+      "thesis": "Superficie color piedra cálida con tinta carbón, acento cobalto técnico y códigos monoespaciados en cada fila.",
+      "palette": [
+        "#F5F4F0",
+        "#141619",
+        "#1D4ED8",
+        "#D97706"
+      ],
+      "materials": [
+        "papel de plano",
+        "tinta carbón",
+        "regla de margen"
+      ],
+      "viewport": "Navegación superior compacta con riel índice izquierdo, KPIs en banda continua sin tarjetas y tablas con numeración de norma.",
+      "risk": "Es la dirección más predecible para software de ingeniería; puede sentirse sobria en exceso para equipos comerciales.",
+      "html": ".impeccable/mocks/decision/model-pick.html",
+      "comp": ".impeccable/mocks/decision/model-pick.png"
+    },
+    {
+      "id": "challenger-japanese-high-density",
+      "kind": "challenger",
+      "catalogId": "japanese-high-density-web",
+      "label": "Mosaico Técnico de Alta Densidad",
+      "verdict": "competitive",
+      "lineage": "Portales técnicos japoneses de especificaciones y catálogos de componentes",
+      "thesis": "Cero relleno SaaS: módulos encajados borde a borde con pestañas rojas compactas y máxima densidad de datos por pantalla.",
+      "palette": [
+        "#FFFFFF",
+        "#111111",
+        "#DC2626",
+        "#E5E7EB"
+      ],
+      "materials": [
+        "mosaico de 1px",
+        "pestañas de señal",
+        "tipografía compacta"
+      ],
+      "viewport": "Mosaico denso de KPIs, pipeline y cotizaciones recientes visibles simultáneamente sin scroll en el primer viewport.",
+      "case": "Gana en claridad y densidad operativa para cotizadores; pierde levemente en identificación B2B corporativa frente al catálogo industrial.",
+      "risk": "La alta densidad sin jerarquía estricta puede saturar a usuarios nuevos en el CRM.",
+      "html": ".impeccable/mocks/decision/challenger-japanese-high-density.html",
+      "comp": ".impeccable/mocks/decision/challenger-japanese-high-density.png",
+      "hero": "https://impeccable.style/worlds/cards/japanese-high-density-web-hero.webp"
+    },
+    {
+      "id": "challenger-split-flap",
+      "kind": "challenger",
+      "catalogId": "signals-instruments-split-flap-concourse",
+      "label": "Tablero Split-Flap Ferroviario",
+      "verdict": "declined",
+      "lineage": "Tableros mecánicos de salidas en estaciones centrales",
+      "palette": [
+        "#111315",
+        "#F8FAFC",
+        "#F59E0B"
+      ],
+      "materials": [
+        "aletas mate",
+        "acero cepillado"
+      ],
+      "viewport": "Filas mecánicas oscuras con tipografía condensada fija.",
+      "case": "No encaja con la edición de cotizaciones complejas ni formularios B2B.",
+      "kept": "Alineación tabular estricta donde los cambios de estado actualizan en sitio sin saltos.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-split-flap-concourse-hero.webp"
+    },
+    {
+      "id": "challenger-crouwel",
+      "kind": "challenger",
+      "catalogId": "crouwel-grid-specimen",
+      "label": "Retícula Tipográfica Crouwel",
+      "verdict": "declined",
+      "lineage": "Especímenes tipográficos modulares de Wim Crouwel",
+      "palette": [
+        "#FFFFFF",
+        "#0F172A",
+        "#2563EB"
+      ],
+      "materials": [
+        "retícula visible",
+        "tinta plana"
+      ],
+      "viewport": "Letras monumentales construidas por celda sobre papel cuadriculado.",
+      "case": "La tipografía display modular reduce la legibilidad en tablas financieras y Kanban.",
+      "kept": "Líneas estructurales visibles de 1px que ordenan módulos eliminando tarjetas genéricas.",
+      "hero": "https://impeccable.style/worlds/cards/crouwel-grid-specimen-hero.webp"
+    },
+    {
+      "id": "challenger-star-atlas",
+      "kind": "challenger",
+      "catalogId": "notation-diagram-systems-star-atlas",
+      "label": "Atlas Estelar de Coordenadas",
+      "verdict": "declined",
+      "lineage": "Cartas celestes nocturnas con magnitudes por diámetro",
+      "palette": [
+        "#0B132B",
+        "#F8FAFC",
+        "#EF4444"
+      ],
+      "materials": [
+        "tinta nocturna",
+        "anillos de magnitud"
+      ],
+      "viewport": "Fondo azul marino profundo con puntos escalados por magnitud.",
+      "case": "El modo nocturno cartográfico dificulta el uso prolongado en oficina y campo con luz solar.",
+      "kept": "Jerarquía visual por magnitud para distinguir montos críticos y alertas SLA.",
+      "hero": "https://impeccable.style/worlds/cards/notation-diagram-systems-star-atlas-hero.webp"
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code",
+    "toggle": true
+  },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "Estándar SaaS Corporativo",
+    "thesis": "Diseño SaaS limpio convencional con tarjetas redondeadas y acento azul/índigo.",
+    "palette": [
+      "#FFFFFF",
+      "#0F172A",
+      "#4F46E5"
+    ],
+    "materials": [
+      "tarjetas limpias",
+      "sombras suaves"
+    ],
+    "viewport": "Sidebar oscuro clásico, tarjetas KPI redondeadas y tablas estándar.",
+    "risk": "Idéntico al resto de CRMs genéricos del mercado.",
+    "html": ".impeccable/mocks/decision/canon.html",
+    "comp": ".impeccable/mocks/decision/canon.png"
+  },
+  "steer": true
+}

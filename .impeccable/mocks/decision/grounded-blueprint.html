@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { width: 1440px; height: 900px; overflow: hidden; font-family: 'Public Sans', sans-serif; background: #F8FAFC; color: #0F1E36; display: flex; }
+  .rail { width: 248px; background: #0F1E36; color: #CBD5E1; display: flex; flex-direction: column; }
+  .brand { padding: 20px; border-bottom: 1px solid #1E3252; }
+  .brand h2 { color: #FFFFFF; font-size: 17px; font-weight: 700; }
+  .nav { padding: 14px 12px; display: flex; flex-direction: column; gap: 3px; }
+  .nav-a { padding: 10px 12px; border-radius: 4px; font-size: 13px; color: #94A3B8; }
+  .nav-a.active { background: #162B4D; color: #FFFFFF; border-left: 3px solid #0284C7; font-weight: 600; }
+  .main { flex: 1; display: flex; flex-direction: column; }
+  .bar { height: 58px; background: #FFFFFF; border-bottom: 1px solid #CBD5E1; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; }
+  .btn { background: #0284C7; color: #FFFFFF; border: none; padding: 9px 16px; border-radius: 4px; font-size: 13px; font-weight: 600; }
+  .body { padding: 24px 28px; display: flex; flex-direction: column; gap: 18px; flex: 1; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi { background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 4px; padding: 16px 18px; }
+  .kpi-k { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #64748B; text-transform: uppercase; }
+  .kpi-v { font-size: 24px; font-weight: 700; margin-top: 6px; }
+  .card { background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 4px; padding: 18px 20px; flex: 1; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  th { text-align: left; padding: 10px; border-bottom: 1px solid #CBD5E1; font-size: 11px; color: #64748B; text-transform: uppercase; }
+  td { padding: 12px 10px; border-bottom: 1px solid #E2E8F0; }
+</style>
+</head>
+<body>
+  <aside class="rail">
+    <div class="brand"><h2>TechQuote CRM</h2></div>
+    <nav class="nav">
+      <div class="nav-a active">Dashboard</div>
+      <div class="nav-a">Leads Kanban</div>
+      <div class="nav-a">Cotizaciones</div>
+      <div class="nav-a">Proyectos</div>
+      <div class="nav-a">Almacén &amp; Compras</div>
+      <div class="nav-a">Contratos SLA</div>
+      <div class="nav-a">Finanzas</div>
+    </nav>
+  </aside>
+  <main class="main">
+    <header class="bar">
+      <div style="font-size:16px;font-weight:700;">Resumen Ejecutivo</div>
+      <button class="btn">+ Nueva Cotización</button>
+    </header>
+    <div class="body">
+      <div class="kpis">
+        <div class="kpi"><div class="kpi-k">Pipeline</div><div class="kpi-v">S/ 184,500</div></div>
+        <div class="kpi"><div class="kpi-k">Cotizado</div><div class="kpi-v">S/ 96,420</div></div>
+        <div class="kpi"><div class="kpi-k">Margen Prom.</div><div class="kpi-v" style="color:#0284C7">28.4%</div></div>
+        <div class="kpi"><div class="kpi-k">Proyectos</div><div class="kpi-v">5</div></div>
+      </div>
+      <div class="card">
+        <h3 style="font-size:14px;font-weight:700;">Cotizaciones Recientes</h3>
+        <table>
+          <thead><tr><th>Código</th><th>Cliente</th><th>Servicio</th><th>Total</th><th>Estado</th></tr></thead>
+          <tbody>
+            <tr><td style="font-family:'JetBrains Mono',monospace;color:#0284C7;">COT-2026-0041</td><td>Clínica San Pablo</td><td>CCTV Torre B</td><td>S/ 42,800</td><td>Aprobada</td></tr>
+            <tr><td style="font-family:'JetBrains Mono',monospace;color:#0284C7;">COT-2026-0040</td><td>Logística Callao</td><td>Fibra Óptica</td><td>S/ 28,150</td><td>Pend. Margen</td></tr>
+            <tr><td style="font-family:'JetBrains Mono',monospace;color:#0284C7;">COT-2026-0039</td><td>Banco Andino</td><td>Wi-Fi 6E</td><td>S/ 19,400</td><td>Enviada</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

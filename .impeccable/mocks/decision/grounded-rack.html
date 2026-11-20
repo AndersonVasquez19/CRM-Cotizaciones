@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { width: 1440px; height: 900px; overflow: hidden; font-family: 'Public Sans', sans-serif; background: #ECEFF3; color: #181C22; display: flex; }
+  .rail { width: 244px; background: #181C22; color: #CBD5E1; display: flex; flex-direction: column; }
+  .brand { padding: 20px; border-bottom: 1px solid #2A303B; display: flex; align-items: center; gap: 10px; }
+  .dot { width: 10px; height: 10px; border-radius: 2px; background: #0F766E; }
+  .brand-name { font-size: 16px; font-weight: 700; color: #FFFFFF; letter-spacing: -0.01em; }
+  .nav { padding: 14px 10px; flex: 1; display: flex; flex-direction: column; gap: 2px; }
+  .nav-item { padding: 9px 12px; border-radius: 5px; font-size: 13px; color: #94A3B8; display: flex; justify-content: space-between; align-items: center; }
+  .nav-item.active { background: #0F766E; color: #FFFFFF; font-weight: 600; }
+  .port { font-family: 'JetBrains Mono', monospace; font-size: 10px; background: rgba(255,255,255,0.08); padding: 2px 5px; border-radius: 3px; }
+  .main { flex: 1; display: flex; flex-direction: column; }
+  .topbar { height: 58px; background: #FFFFFF; border-bottom: 1px solid #D3D9E2; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; }
+  .port-strip { display: flex; gap: 8px; align-items: center; }
+  .port-pill { font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 4px 10px; background: #F1F5F9; border: 1px solid #CBD5E1; border-radius: 4px; }
+  .port-pill.warn { background: #FEF3C7; border-color: #F59E0B; color: #92400E; }
+  .btn { background: #0F766E; color: #FFFFFF; border: none; padding: 9px 16px; border-radius: 5px; font-size: 13px; font-weight: 600; }
+  .content { padding: 24px 28px; display: flex; flex-direction: column; gap: 20px; flex: 1; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .kpi { background: #FFFFFF; border: 1px solid #D3D9E2; border-radius: 6px; padding: 16px 18px; }
+  .kpi-k { font-size: 12px; color: #64748B; font-weight: 600; }
+  .kpi-v { font-size: 25px; font-weight: 700; margin-top: 6px; font-variant-numeric: tabular-nums; }
+  .grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 16px; flex: 1; }
+  .card { background: #FFFFFF; border: 1px solid #D3D9E2; border-radius: 6px; overflow: hidden; }
+  .card-h { padding: 12px 18px; border-bottom: 1px solid #E2E8F0; font-size: 13px; font-weight: 700; display: flex; justify-content: space-between; background: #F8FAFC; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; padding: 10px 18px; font-size: 11px; text-transform: uppercase; color: #64748B; border-bottom: 1px solid #E2E8F0; }
+  td { padding: 12px 18px; border-bottom: 1px solid #F1F5F9; font-variant-numeric: tabular-nums; }
+  .tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; padding: 2px 7px; border-radius: 3px; background: #ECFDF5; color: #047857; border: 1px solid #A7F3D0; }
+</style>
+</head>
+<body>
+  <aside class="rail">
+    <div class="brand"><div class="dot"></div><div class="brand-name">TechQuote CRM</div></div>
+    <nav class="nav">
+      <div class="nav-item active"><span>Dashboard</span><span class="port">P01</span></div>
+      <div class="nav-item"><span>Leads Kanban</span><span class="port">P02</span></div>
+      <div class="nav-item"><span>Cotizaciones</span><span class="port">P03</span></div>
+      <div class="nav-item"><span>Proyectos PRY</span><span class="port">P04</span></div>
+      <div class="nav-item"><span>Inventario &amp; OC</span><span class="port">P05</span></div>
+      <div class="nav-item"><span>Contratos &amp; SLA</span><span class="port">P06</span></div>
+      <div class="nav-item"><span>Finanzas</span><span class="port">P07</span></div>
+      <div class="nav-item"><span>Reportes BI</span><span class="port">P08</span></div>
+    </nav>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="port-strip">
+        <span style="font-weight:700;font-size:15px;margin-right:8px;">Panel Operativo</span>
+        <span class="port-pill">API OK</span>
+        <span class="port-pill warn">2 MARGEN PEND.</span>
+      </div>
+      <button class="btn">+ Nueva Cotización</button>
+    </header>
+    <div class="content">
+      <div class="kpis">
+        <div class="kpi"><div class="kpi-k">Pipeline Activo</div><div class="kpi-v">S/ 184,500</div></div>
+        <div class="kpi"><div class="kpi-k">Cotizado del Mes</div><div class="kpi-v">S/ 96,420</div></div>
+        <div class="kpi"><div class="kpi-k">Margen Promedio</div><div class="kpi-v" style="color:#0F766E">28.4%</div></div>
+        <div class="kpi"><div class="kpi-k">Proyectos Activos</div><div class="kpi-v">5</div></div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="card-h"><span>Cotizaciones Recientes</span><span style="color:#0F766E">4 registros</span></div>
+          <table>
+            <thead><tr><th>Código</th><th>Cliente</th><th>Total</th><th>Estado</th></tr></thead>
+            <tbody>
+              <tr><td style="font-family:'JetBrains Mono',monospace;color:#0F766E">COT-2026-0041</td><td>Clínica San Pablo · CCTV</td><td>S/ 42,800</td><td><span class="tag">APROBADA</span></td></tr>
+              <tr><td style="font-family:'JetBrains Mono',monospace;color:#0F766E">COT-2026-0040</td><td>Logística Callao · Fibra</td><td>S/ 28,150</td><td><span class="tag" style="background:#FEF3C7;color:#92400E;border-color:#FCD34D">MARGEN</span></td></tr>
+              <tr><td style="font-family:'JetBrains Mono',monospace;color:#0F766E">COT-2026-0039</td><td>Banco Andino · Wi-Fi 6E</td><td>S/ 19,400</td><td><span class="tag">ENVIADA</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <div class="card-h"><span>Estado de Obras &amp; SLA</span><span>En curso</span></div>
+          <div style="padding:16px 18px;font-size:13px;display:flex;flex-direction:column;gap:12px;">
+            <div style="padding-bottom:10px;border-bottom:1px solid #F1F5F9;"><strong>PRY-2026-0008</strong> · Torre B CCTV (75%)</div>
+            <div style="padding-bottom:10px;border-bottom:1px solid #F1F5F9;"><strong>TKT-2026-0012</strong> · NVR sin grabación</div>
+            <div><strong>OC-2026-0014</strong> · Switch PoE 48p en tránsito</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
